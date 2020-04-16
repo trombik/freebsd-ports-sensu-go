@@ -4,8 +4,8 @@ PORTNAME=		sensu-go
 PORTVERSION=		5.19.1
 CATEGORIES=		sysutils
 
-MAINTAINER=		jp+ports@supplntr.io
-COMMENT=		Ephemeral infrastructure and distributed applications monitoring
+MAINTAINER?=		jp+ports@supplntr.io
+COMMENT?=		Ephemeral infrastructure and distributed applications monitoring
 
 LICENSE=		APACHE20
 
@@ -21,7 +21,7 @@ GH_TAGNAME=		v${PORTVERSION}
 GO_PKGNAME=		github.com/${GH_ACCOUNT}/${GH_PROJECT}
 
 OPTIONS_DEFINE=		SENSU_AGENT SENSU_CLI SENSU_BE
-OPTIONS_DEFAULT?=	SENSU_AGENT SENSU_CLI SENSU_BE
+OPTIONS_DEFAULT=	SENSU_AGENT SENSU_CLI SENSU_BE
 OPTIONS_SUB=		yes
 
 SENSU_AGENT_DESC=	Install sensu-agent daemon
