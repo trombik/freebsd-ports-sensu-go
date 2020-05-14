@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		sensu-go
-PORTVERSION=		5.19.1
+PORTVERSION=		5.20.0
 CATEGORIES=		sysutils
 
 MAINTAINER?=		jp+ports@supplntr.io

@@ -1,6 +1,6 @@
-TIMESTAMP = 1586869194
-SHA256 (sensu-sensu-go-5.19.1-v5.19.1_GH0.tar.gz) = 295d86b9fccad132b7dc719312cb99e9a8c4eca343e1b2efc53677a83aad21e8
-SIZE (sensu-sensu-go-5.19.1-v5.19.1_GH0.tar.gz) = 2758112
+TIMESTAMP = 1589441060
+SHA256 (sensu-sensu-go-5.20.0-v5.20.0_GH0.tar.gz) = cb77c4521d17453f5f127b93d85e9edefd829fe0697492829409e10a45d74dd8
+SIZE (sensu-sensu-go-5.20.0-v5.20.0_GH0.tar.gz) = 2843214
 SHA256 (AlecAivazis-survey-v1.4.0_GH0.tar.gz) = aef031a7314ff529dbf12ca8ee47203123e301808a2027c14029731b82e789b2
 SIZE (AlecAivazis-survey-v1.4.0_GH0.tar.gz) = 36044
 SHA256 (AlecAivazis-survey-v1.4.1_GH0.tar.gz) = bed05ca0bbffd95b1ca877d2877824ae5d674a92a406e7aba06a437eeba5a531
