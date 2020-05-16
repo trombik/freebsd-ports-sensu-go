@@ -16,4 +16,6 @@ RUN_DEPENDS=    rubygem-json>0:devel/rubygem-json \
 USES=		gem
 USE_RUBY=	yes
 
+PLIST_FILES= bin/mutator-sensu-go-into-ruby.rb
+
 .include <bsd.port.mk>
