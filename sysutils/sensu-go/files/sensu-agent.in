@@ -11,6 +11,8 @@
 # 				Default: NO
 # sensu_agent_config (str):	sensu-agent configuration file
 #				Default: ${PREFIX}/etc/sensu-agent.yml
+# sensu_agent_env (str):	list of environment variables to pass
+#				Default: HOME=/home/sensu
 
 . /etc/rc.subr
 
@@ -22,6 +24,7 @@ load_rc_config ${name}
 : ${sensu_agent_enable:="NO"}
 : ${sensu_agent_config:="%%PREFIX%%/etc/sensu-agent.yml"}
 : ${sensu_agent_restart_delay:="10"}
+: ${sensu_agent_env:="HOME=/home/sensu"}
 
 pidfile="/var/run/sensu-agent.pid"
 command=/usr/sbin/daemon

@@ -3,6 +3,7 @@
 PORTNAME=		sensu-go
 PORTVERSION=		5.20.0
 CATEGORIES=		sysutils
+PORTREVISION=   1
 
 MAINTAINER?=		jp+ports@supplntr.io
 COMMENT?=		Ephemeral infrastructure and distributed applications monitoring
