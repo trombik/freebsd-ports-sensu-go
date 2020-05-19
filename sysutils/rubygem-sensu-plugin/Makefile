@@ -2,6 +2,7 @@
 
 PORTNAME=	sensu-plugin
 DISTVERSION=	4.0.0
+PORTREVISION=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -18,4 +19,6 @@ USE_RUBY=	yes
 
 PLIST_FILES= bin/mutator-sensu-go-into-ruby.rb
 
+pre-configure:
+	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/lib/sensu-plugin/utils.rb
 .include <bsd.port.mk>

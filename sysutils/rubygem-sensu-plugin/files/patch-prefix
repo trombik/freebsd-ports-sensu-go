@@ -1,0 +1,11 @@
+--- lib/sensu-plugin/utils.rb.orig	2020-05-19 12:03:59.147260000 +0700
++++ lib/sensu-plugin/utils.rb	2020-05-19 12:07:17.899584000 +0700
+@@ -11,7 +11,7 @@
+         elsif ENV['SENSU_CONFIG_FILES']
+           ENV['SENSU_CONFIG_FILES'].split(':')
+         else
+-          ['/etc/sensu/config.json'] + Dir['/etc/sensu/conf.d/**/*.json']
++          ['%%PREFIX%%/etc/sensu/config.json'] + Dir['%%PREFIX%%/etc/sensu/conf.d/**/*.json']
+         end
+       end
+ 
