@@ -11,6 +11,8 @@
 # 				Default: NO
 # sensu_backend_config (str):	sensu-backend configuration file
 #				Default: ${PREFIX}/etc/sensu-backend.yml
+# sensu_backend_env (str):	list of environment variables to pass
+#				Default: HOME=/home/sensu
 
 . /etc/rc.subr
 
@@ -22,6 +24,7 @@ load_rc_config ${name}
 : ${sensu_backend_enable:="NO"}
 : ${sensu_backend_config:="%%PREFIX%%/etc/sensu-backend.yml"}
 : ${sensu_backend_restart_delay:="10"}
+: ${sensu_backend_env:="HOME=/home/sensu"}
 
 pidfile="/var/run/sensu-backend.pid"
 command=/usr/sbin/daemon
