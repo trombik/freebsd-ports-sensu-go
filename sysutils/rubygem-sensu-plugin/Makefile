@@ -21,6 +21,6 @@ PLIST_FILES= bin/mutator-sensu-go-into-ruby.rb
 
 post-patch:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/lib/sensu-plugin/utils.rb
-    ${RM} ${WRKSRC}/lib/sensu-plugin/utils.rb.bak
+	${RM} ${WRKSRC}/lib/sensu-plugin/utils.rb.bak
 
 .include <bsd.port.mk>
