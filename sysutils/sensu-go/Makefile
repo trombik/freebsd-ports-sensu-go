@@ -176,11 +176,13 @@ do-install:
 .endfor
 
 post-install-SENSU_AGENT-on:
-	${INSTALL_DATA} ${PATCHDIR}/sensu-agent.yml.sample \
-		${STAGEDIR}${PREFIX}/etc/sensu-agent.yml.sample
+	${INSTALL} -d ${STAGEDIR}${PREFIX}/etc/sensu
+	${INSTALL_DATA} ${PATCHDIR}/sensu/agent.yml.sample \
+		${STAGEDIR}${PREFIX}/etc/sensu/agent.yml.sample
 
 post-install-SENSU_BE-on:
-	${INSTALL_DATA} ${PATCHDIR}/sensu-backend.yml.sample \
-		${STAGEDIR}${PREFIX}/etc/sensu-backend.yml.sample
+	${INSTALL} -d ${STAGEDIR}${PREFIX}/etc/sensu
+	${INSTALL_DATA} ${PATCHDIR}/sensu/backend.yml.sample \
+		${STAGEDIR}${PREFIX}/etc/sensu/backend.yml.sample
 
 .include <bsd.port.mk>
