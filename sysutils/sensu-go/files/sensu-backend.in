@@ -9,8 +9,10 @@
 #
 # sensu_backend_enable (bool):	Set to YES to enable sensu-backend
 # 				Default: NO
-# sensu_backend_config (str):	sensu-backend configuration file
-#				Default: ${PREFIX}/etc/sensu-backend.yml
+# sensu_backend_args (str):	Extra arguments to backend
+# 				Default: ""
+# sensu_backend_env (str):	list of environment variables to pass
+#				Default: HOME=/home/sensu
 
 . /etc/rc.subr
 
@@ -20,15 +22,16 @@ rcvar=sensu_backend_enable
 load_rc_config ${name}
 
 : ${sensu_backend_enable:="NO"}
-: ${sensu_backend_config:="%%PREFIX%%/etc/sensu-backend.yml"}
+: ${sensu_backend_args:=""}
 : ${sensu_backend_restart_delay:="10"}
+: ${sensu_backend_env:="HOME=/home/sensu"}
 
 pidfile="/var/run/sensu-backend.pid"
 command=/usr/sbin/daemon
 sensu_backend_command=%%PREFIX%%/bin/sensu-backend
 command_args="-rP ${pidfile} -S -R ${sensu_backend_restart_delay} \
     -T ${name} ${sensu_backend_command} \
-    start -c ${sensu_backend_config}"
+    start ${sensu_backend_args}"
 
 load_rc_config $name
 run_rc_command "$1"
