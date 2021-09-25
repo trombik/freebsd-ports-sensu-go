@@ -16,7 +16,7 @@ RUN_DEPENDS=    rubygem-json>0:devel/rubygem-json \
 
 USES=		gem
 USE_RUBY=	yes
-
+BROKEN=	RubyGem dependency mixlib-cli ~> 1.5 is not satisfied
 PLIST_FILES= bin/mutator-sensu-go-into-ruby.rb
 
 post-patch:
