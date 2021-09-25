@@ -158,6 +158,7 @@ build_task:
     CCACHE_DIR=${PD_CCACHE_DIR}
     ALLOW_MAKE_JOBS=${PD_ALLOW_MAKE_JOBS}
     ALLOW_MAKE_JOBS_PACKAGES="${PD_ALLOW_MAKE_JOBS_PACKAGES}"
+    PARALLEL_JOBS=1
 
     # increase MAX_FILES. crosstool-NG.sh tries to modify ulimit during the
     # build, which is not allowed.
