@@ -282,7 +282,7 @@ generate_repo_task:
     #
     # XXX you need to create your own private and public keys, and upload the
     # private key to cirrus-ci. see also pkg-repo(8)
-    PD_REPO_KEY: ENCRYPTED[55405781c279459db5e73e1f85a4b93e8ff65c40750e0a47fc621de48e1c3a84c794a5c7eb867ce0c4c25b3b7d813b1d]
+    PD_REPO_KEY: ENCRYPTED[172da41bd5060ed902522774d93248f0ac20c34032663836db71605a5baf61d44ac152a53b1c4a84edb4db13049558ee]
   depends_on:
     - build
   matrix:
